@@ -8,6 +8,7 @@
     height: 80px;
     background-color: wheat;
     padding: 20px;
+    border: 2px black solid;
 }
 .header img{
     float: left;
@@ -45,8 +46,8 @@
     min-height: 350px;
     width: 80%;
     background-color: activecaption;
-   
     padding-left: 10px;
+    border: 2px black solid;
  
 }
 .footer {
@@ -62,6 +63,8 @@
     width: 19%;
     background-color:graytext;
     padding: 1px;
+    border: 2px black solid;
+    
 }
 .sidePost{
     display: block;
