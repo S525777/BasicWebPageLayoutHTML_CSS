@@ -64,5 +64,11 @@
     background-color:graytext;
     padding: 1px;
 }
-
-
+.sidePost{
+    display: block;
+    padding: 10px;
+    background-color: aquamarine;
+    margin: 10px;
+   border: 5px black solid;
+    
+}
