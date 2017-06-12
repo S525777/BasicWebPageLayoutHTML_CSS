@@ -23,57 +23,55 @@ and open the template in the editor.
                 <h1>Hello world</h1>
 
             </div>
-
-
             <div class="navigationBar">
                 <ul><h3>
                         <li><a href="#">About Marlabs</a></li>
                         <li><a href="#">Technologies</a></li>
-                        
+
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Contact Us</a></li></h3>
                 </ul> 
-           </div>
+            </div>
             <div style="display: flex">
-            <div class = "mainContent"> 
-                <div class="mainPost">
-                    <img style="height: 50px;width:50px;float: left "src="marlabs_title_logo.png" alt="logo" />
-                    <h2> My First Post</h2>
-                
-                <h4> Sample Post is a low cost way to mail people a sample of your product to try.
-                    Sample Post is a low cost way to mail people a sample of your product to try.
-                    Sample Post is a low cost way to mail people a sample of your product to try.
-                    Sample Post is a low cost way to mail people a sample of your product to try.</h4>
-                <span style="display: inline;">
-                    <input type="button" value="like"/> <input type="button" value="comment"/> <input type="button" value="share"/>
-                </span>
+                <div class = "mainContent"> 
+                    <div class="mainPost">
+                        <img style="height: 50px;width:50px;float: left "src="marlabs_title_logo.png" alt="logo" />
+                        <h2> My First Post</h2>
+
+                        <h4> Sample Post is a low cost way to mail people a sample of your product to try.
+                            Sample Post is a low cost way to mail people a sample of your product to try.
+                            Sample Post is a low cost way to mail people a sample of your product to try.
+                            Sample Post is a low cost way to mail people a sample of your product to try.</h4>
+                        <span style="display: inline;">
+                            <input type="button" value="like"/> <input type="button" value="comment"/> <input type="button" value="share"/>
+                        </span>
+                    </div>
+                    <div class="mainPost">
+                        <img style="height: 50px;width:50px;float: left "src="marlabs_title_logo.png" alt="logo" />
+                        <h2 style=""> My Second Post</h2>
+                        <h4> Sample Post is a low cost way to mail people a sample of your product to try.
+                            Sample Post is a low cost way to mail people a sample of your product to try.
+                            Sample Post is a low cost way to mail people a sample of your product to try.
+                            .</h4>
+                        <span style="display: inline;">
+                            <input type="button" value="like"/> <input type="button" value="comment"/> <input type="button" value="share"/>
+                        </span>
+                    </div>
                 </div>
-  <div class="mainPost">
-      <img style="height: 50px;width:50px;float: left "src="marlabs_title_logo.png" alt="logo" />
-      <h2 style=""> My Second Post</h2>
-                <h4> Sample Post is a low cost way to mail people a sample of your product to try.
-                    Sample Post is a low cost way to mail people a sample of your product to try.
-                    Sample Post is a low cost way to mail people a sample of your product to try.
-                    .</h4>
-                <span style="display: inline;">
-                    <input type="button" value="like"/> <input type="button" value="comment"/> <input type="button" value="share"/>
-                </span>
-            </div>
-            </div>
-            <div class="sidebar">
-                <div class="sidePost">
-                <h2> My First Post</h2>
-                <h4> Sample Post is a low cost way to mail people a sample of your product to try.
-                   
-                   .</h4>
-                </div>
-                 <div class="sidePost">
-                <h2> My First Post</h2>
-                <h4> Sample Post is a low cost way to mail people a sample of your product to try.
-                    
-                   .</h4>
-                </div>
+                <div class="sidebar">
+                    <div class="sidePost">
+                        <h2> My First Post</h2>
+                        <h4> Sample Post is a low cost way to mail people a sample of your product to try.
+
+                            .</h4>
+                    </div>
+                    <div class="sidePost">
+                        <h2> My First Post</h2>
+                        <h4> Sample Post is a low cost way to mail people a sample of your product to try.
+
+                            .</h4>
+                    </div>
                 </div>
             </div>
             <div class="footer">
@@ -84,6 +82,48 @@ and open the template in the editor.
             </div>
 
         </div>
+        <script>
+            function returnMaxLength(stringArray, arrayLength)
+            {
+                var i = 0;
+                var testArray = [];
+                while (i < arrayLength)
+                {
+                    var testString = stringArray[i];
+                    var countObject = getFrequency(testString); //key: alphabets : values : their count
+                    testArray += Math.max.apply(Math, (Object.values(countObject)));
+                    console.log(testArray);
+                    i++;
+                }
+                var max = testArray[0];
+                var maxIndex = 0;
+                for (var i = 1; i < testArray.length; i++) {
+                    if (testArray[i] > max) {
+                        maxIndex = i;
+                        max = testArray[i];
+                    }
+                }
+                console.log(strArray[maxIndex]);
+                return strArray[maxIndex];
+
+            }
+            function getFrequency(string) {
+                var freq = {};
+                for (var i = 0; i < string.length; i++) {
+                    var character = string.charAt(i);
+                    if (freq[character]) {
+                        freq[character]++;
+                    } else {
+                        freq[character] = 1;
+                    }
+                }
+                return freq;
+            }
+            var strArray = ["AANVCDD", "ADBBDDD", "CCCKEC", "NFFDDHHFF"];
+            returnMaxLength(strArray, strArray.length);
+
+
+        </script>
 
 
     </body>
